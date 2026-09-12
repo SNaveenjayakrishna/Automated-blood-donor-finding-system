@@ -1,0 +1,26 @@
+/* Loading */
+.loading {
+  text-align: center;
+  font-size: clamp(1rem, 1.5vw, 1.2rem);
+  font-weight: 500;
+  color: #666;
+  padding: 20px 0;
+}
+/* Messages */
+.message { color: #e84118; margin-bottom: 12px; font-weight: 500; }
+
+/* Warning text */
+.warningText {
+  background: #fff;
+  padding: 14px;
+  border-radius: 10px;
+  color: #444;
+  line-height: 1.5;
+  margin: 14px 0 20px;
+  border-left: 4px solid #ef4444;
+}
+
+.warningText span {
+  font-weight: 700;
+  color: #dc2626;
+}

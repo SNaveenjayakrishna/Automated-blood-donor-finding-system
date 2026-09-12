@@ -1,0 +1,3 @@
+/* Status */
+.status-available { color: #4cd137; font-weight: 600; }
+.status-unavailable { color: #e84118; font-weight: 600; }

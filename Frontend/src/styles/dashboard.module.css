@@ -1,0 +1,143 @@
+/* src/styles/dashboard.module.css */
+
+/* Dashboard Layout */
+.dashboardContainer {
+  display: flex;
+  min-height: 100vh;
+  background-color: #f5f6fa;
+  font-family: 'Inter', sans-serif;
+  /*align-items: stretch;  sidebar matches main content height */
+
+}
+
+
+/* Sidebar */
+.sidebar {
+  width: clamp(220px, 20%, 260px);
+  background-color: #2f3640;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  padding: 20px 1rem; /* space from top & bottom */
+  transition: all 0.3s ease;
+  position: relative;
+
+  overflow-y: auto;        /* scroll when content increases */
+  box-sizing: border-box;  /* prevents overflow issues */
+}
+
+
+.sidebar h2 {
+  font-size: clamp(1.5rem, 2vw, 2rem);
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.sidebar button {
+  background: none;
+  border: none;
+  color: #fff;
+  text-align: left;
+  padding: clamp(10px, 1.2vw, 14px) 1rem;
+  margin-bottom: 0.5rem;
+  font-size: clamp(0.9rem, 1vw, 1.1rem);
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.2s;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+}
+
+.sidebar button:hover { background-color: #353b48; }
+.activeBtn { background-color: #4cd137 !important; color: #fff; }
+
+
+.logoutBtn {
+  
+  background-color: #e84118;
+  color: #fff;
+  padding: clamp(10px, 1vw, 14px);
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  
+}
+
+.logoutBtn:hover { opacity: 0.9; }
+.sidebar .logoutBtn {
+  background-color: #e84118;
+  color: #fff;
+  width: fit-content;   /* only as wide as text + padding */
+  padding: clamp(10px, 1vw, 14px) 1rem; /* top/bottom + left/right */
+  border-radius: 8px;
+  cursor: pointer;
+ margin-bottom: auto;
+}
+
+.sidebar .logoutBtn:hover {
+  background-color: #c23616;
+  opacity: 1;
+}
+
+
+.sidebarToggleBtn {
+  display: none;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  font-size: 24px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 1100;
+}
+.closeBtn {
+  position: absolute;
+  top: 20px;
+  right: 15px;
+  font-size: 22px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: white;
+}
+
+/* Overlay for mobile */
+.overlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0,0,0,0.4);
+  z-index: 100;
+}
+
+/* Main content */
+.mainContent {
+  flex: 1;
+  padding: clamp(20px, 2vw, 30px);
+}
+
+/* Mobile Responsiveness */
+@media screen and (max-width: 768px) {
+  .sidebar {
+    position: fixed;
+    left: -100%;
+    top: 0;
+    height: 100%;
+    z-index: 1000;
+  }
+  .dashboardContainer {
+   padding-top: 3rem; 
+}
+.heading{
+  padding-top: 2rem; 
+}
+
+  .sidebar.show { left: 0; }
+  .sidebarToggleBtn { display: block; }
+}
+
+
+
+

@@ -1,0 +1,63 @@
+/* Overlay background */
+.overlay {
+  position: fixed;
+  inset: 0; /* shorthand for top, left, right, bottom = 0 */
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px; /* prevents modal touching edges on small screens */
+  z-index: 2000;
+  
+}
+
+/* Modal box */
+.modal {
+  position: relative; 
+  background: #ffffff;
+  width: 100%;
+  max-width: clamp(320px, 90%, 700px);
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.25);
+  animation: fadeIn 0.2s ease-in-out;
+  overflow-y: auto;
+  max-height: calc(100vh - 100px); 
+}
+
+/* Tablet screens */
+@media (max-width: 768px) {
+  .modal {
+    max-width: 95%;
+    padding: 20px;
+    border-radius: 10px;
+  }
+}
+
+/* Mobile screens */
+@media (max-width: 480px) {
+  .modal {
+    max-width: 100%;
+    padding: 18px;
+    border-radius: 8px;
+  }
+}
+
+.closeBtn {
+  position: absolute;
+  top: 15px;
+  right: 15px; /* Top LEFT as you requested */
+  background: transparent;
+  border: none;
+  font-size: 22px;
+  cursor: pointer;
+  color: #000;
+  font-weight: bold;
+  transition: 0.2s ease;
+  margin-bottom: 2px;
+}
+
+.closeBtn:hover {
+  color: #e74c3c;
+  transform: scale(1.1);
+}

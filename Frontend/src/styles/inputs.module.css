@@ -1,0 +1,51 @@
+/* Inputs */
+.input, .dateInput, textarea {
+  width: 100%;
+  padding: clamp(8px, 1vw, 12px);
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  margin-bottom: 5px;
+  margin-top: 5px;
+  font-size: clamp(0.85rem, 1vw, 1rem);
+  box-sizing: border-box;
+}
+
+.input:focus, .dateInput:focus, textarea:focus {
+  outline: none;
+  border-color: #4cd137;
+  box-shadow: 0 0 5px rgba(76, 175, 80, 0.5);
+}
+.searchInput {
+  width: 100%;           /* Take full width of parent */
+  max-width: 400px;      /* Limit width on large screens */
+  padding: 8px 12px;
+  margin-bottom: 16px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  box-sizing: border-box; /* Include padding in width */
+  font-size: 1rem;       /* Adjust font size for readability */
+}
+
+/* Optional: stack search inputs nicely on mobile */
+@media (max-width: 768px) {
+  .searchInput {
+    max-width: 90%;     /* Use full width on tablets & phones */
+    font-size: 0.9rem;   /* Slightly smaller text on small screens */
+  }
+}
+
+.groupedInputFields{
+  display: grid;
+  grid-template-columns: 1fr 1fr;/*1 fraction of available space. 2 columns take 50 50 of the available space*/
+  gap: 12px; 
+}
+
+.inputfield label{
+  font-weight: 600;
+  margin: auto;
+}
+.form{
+display: flex;
+flex-direction: column;
+gap: 14px;
+}

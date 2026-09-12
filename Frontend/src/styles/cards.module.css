@@ -1,0 +1,48 @@
+/* Cards */
+.card {
+  background-color: #fff;
+  border-radius: 12px;
+  padding: clamp(15px, 2vw, 25px);
+  margin-bottom: 20px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+.mobileCards {
+  display: none;
+}
+@media (max-width: 768px) {
+
+  .mobileCards {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .card {
+    background: #fff;
+    padding: 14px;
+    border-radius: 12px;
+    font-size: 14px;
+    line-height: 1.5;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  }
+  .requestcard{
+    background: linear-gradient(180deg, #ffe5da, #ffffff);
+    padding: 14px;
+    border-radius: 12px;
+    font-size: 14px;
+    line-height: 1.5;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  }
+}
+
+/* Card container */
+.dangerCard {
+  background: #fff5f5;
+  border: 1px solid #ffd6d6;
+  padding: 24px;
+  border-radius: 16px;
+  box-shadow: 0 12px 30px rgba(255, 0, 0, 0.08);
+  max-width: 480px;
+  margin: 0 auto;
+  animation: fadeIn 0.3s ease-in-out;
+}

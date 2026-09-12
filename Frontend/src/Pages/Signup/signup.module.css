@@ -1,0 +1,48 @@
+.checkbox {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 12px 0;
+  font-size: 14px;
+  color: #eaeaea;
+}
+
+/* Label styling */
+.checkbox label {
+    color: black;
+  cursor: pointer;
+  line-height: 1.4;
+}
+
+/* Checkbox styling */
+.checkbox input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+  accent-color: #4caf50; /* modern browsers */
+}
+
+.signupform textarea {
+  resize: vertical;
+  min-height: 80px;
+  max-height: 300px;
+  padding: clamp(10px, 2vw, 14px);
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  font-size: clamp(12px, 2vw, 16px);
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.signupform textarea:focus {
+  border-color: #ff4d4d;
+  box-shadow: 0 0 8px rgba(255, 0, 0, 0.4);
+}
+
+
+.signupform label{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* move label to start */
+ 
+}

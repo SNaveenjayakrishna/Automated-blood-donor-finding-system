@@ -1,0 +1,100 @@
+
+.Profile {
+  background: linear-gradient(180deg, #f0fdf4, #ffffff);
+  padding: 16px;
+  min-height: 100vh;
+}
+
+/* HEADER */
+.Header {
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.Header h2 {
+  margin: 10px 0 6px;
+  font-size: clamp(18px, 4.5vw, 24px);
+}
+
+.avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin: auto;
+  background: linear-gradient(135deg, #22c55e, #16a34a);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 32px;
+  color: white;
+  font-weight: bold;
+  box-shadow: 0 8px 20px rgba(34,197,94,0.4);
+}
+
+/* BADGES */
+.badgesRow {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.bloodBadge {
+  background: #fee2e2;
+  color: #dc2626;
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-weight: 600;
+}
+
+.availableBadge {
+  background: #dcfce7;
+  color: #16a34a;
+  padding: 5px 12px;
+  border-radius: 20px;
+}
+
+.unavailableBadge {
+  background: #fee2e2;
+  color: #dc2626;
+  padding: 5px 12px;
+  border-radius: 20px;
+}
+
+/* CARDS */
+.mobileCard {
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(8px);
+  padding: 14px;
+  border-radius: 14px;
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  margin-bottom: 12px;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.05);
+}
+
+.cardIcon {
+  font-size: 22px;
+}
+
+.cardLabel {
+  font-size: clamp(11px, 2.8vw, 14px);
+  color: #6b7280;
+}
+
+.cardValue {
+  font-weight: 600;
+  color: #111827;
+  font-size: clamp(14px, 3.8vw, 17px);
+}
+
+/* SECTION */
+.section {
+  margin-bottom: 22px;
+}
+
+.section h4 {
+  margin-bottom: 10px;
+  color: #374151;
+  font-size: clamp(14px, 3.5vw, 18px);
+}
